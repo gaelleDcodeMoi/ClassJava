@@ -1,0 +1,26 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+
+                int[] tictactoe = new int[9];
+                String[] players = new String[9];
+                int i;
+
+                for(i=0; i<9;i++)
+                {
+                    players[i]=" ";
+                }
+
+                System.out.println("+---+---+---+");
+                System.out.println("| " + players[0] + " | " + players[1] + " | " + players[2] + " |");
+                System.out.println("+---+---+---+");
+                System.out.println("| " + players[3] + " | " + players[4] + " | " + players[5] + " |");
+                System.out.println("+---+---+---+");
+                System.out.println("| " + players[6] + " | " + players[7] + " | " + players[8] + " |");
+                System.out.println("+---+---+---+");
+
+    }
+
+}
+
