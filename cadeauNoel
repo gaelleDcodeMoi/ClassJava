@@ -1,0 +1,23 @@
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int n;
+        int m;
+        String famille1[] = {"Gaelle", "Aurelie", "Julien", "Juliette", "Nicolas", "Melanie", "Adrien N", "Yann", "Adrien C", "Marine", "Cyrille", "Stephane", "Bruno", "Corinne", "Mum", "Patricia", "Clelie", "Quentin" };
+        Random r = new Random();
+        n = r.nextInt(17);
+        m = r.nextInt(17);
+
+
+        for (int i = 0; i < 16; i++) {
+
+
+            System.out.println("Papa Noel : " + famille1[n] + " offre un cadeau à " + famille1[m]);
+            n = r.nextInt(17);
+            m = r.nextInt(17);
+
+        }
+    }
+}
