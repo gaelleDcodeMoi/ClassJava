@@ -1,16 +1,82 @@
-private static void ticTacToe() {
-            String[] players = new String[9];
-            int i;
+package com.ocr.gaelle;
 
-            for (i = 0; i < 9; i++) {
-                players[i] = " ";
+import java.util.Scanner;
+
+public class Main {
+    private static char board[][] = new char[3][3];
+
+
+    public static void main(String[] args) {
+        // write your code here
+
+        initTicTacToe();
+        p1();
+
+    }
+
+    private static void initTicTacToe() {
+        for (int i = 0; i < 3; i++) {
+            // Loop through columns
+            System.out.print("| ");
+            for (int j = 0; j < 3; j++) {
+                board[i][j] = '-';
+                System.out.print(board[i][j] + " | ");
+            }
+            System.out.println();
+        }
+    }
+
+        private static void printTicTacToe(){
+            for (int i = 0; i < 3; i++) {
+                // Loop through columns
+                System.out.print("| ");
+                for (int j = 0; j < 3; j++) {
+                    System.out.print(board[i][j] + " | ");
+                }
+                System.out.println();
+            }
+        }
+
+        private static void p1 () {
+        int x;
+        Scanner reader = new Scanner(System.in);
+
+        for (int i = 0; i <= 9; i++) {
+            System.out.println("Player X's turns: \nIn wich square ould you like to put your X?");
+            x = reader.nextInt();
+
+            if (x == 1) {
+                board[0][0] = 'X';
+                printTicTacToe();
+
+            } else if (x == 2) {
+                board[0][1] = 'X';
+                printTicTacToe();
+            } else if (x == 3) {
+                board[0][2] = 'X';
+                printTicTacToe();
+            } else if (x == 4) {
+                board[1][0] = 'X';
+                printTicTacToe();
+            } else if (x == 5) {
+                board[1][1] = 'X';
+                printTicTacToe();
+            } else if (x == 6) {
+                board[1][2] = 'X';
+                printTicTacToe();
+            } else if (x == 7) {
+                board[2][0] = 'X';
+                printTicTacToe();
+            } else if (x == 8) {
+                board[2][1] = 'X';
+                printTicTacToe();
+            } else if (x == 9) {
+                board[2][2] = 'X';
+                printTicTacToe();
+            } else {
+                System.out.println("This is not a valid input");
             }
 
-            System.out.println("+---+---+---+");
-            System.out.println("| " + players[0] + " | " + players[1] + " | " + players[2] + " |");
-            System.out.println("+---+---+---+");
-            System.out.println("| " + players[3] + " | " + players[4] + " | " + players[5] + " |");
-            System.out.println("+---+---+---+");
-            System.out.println("| " + players[6] + " | " + players[7] + " | " + players[8] + " |");
-            System.out.println("+---+---+---+");
         }
+    }
+}
